@@ -1,12 +1,12 @@
 function atualizarRelogio() {
   const agora = new Date();
 
-  const horas = String(agora.getHours()).padStart(2, '0');
-  const minutos = String(agora.getMinutes()).padStart(2, '0');
-  const segundos = String(agora.getSeconds()).padStart(2, '0');
+  const horas = agora.getHours().toString().padStart(2, '0');
+  const minutos = agora.getMinutes().toString().padStart(2, '0');
+  const segundos = agora.getSeconds().toString().padStart(2, '0');
 
-  const dia = String(agora.getDate()).padStart(2, '0');
-  const mes = String(agora.getMonth() + 1).padStart(2, '0');
+  const dia = agora.getDate().toString().padStart(2, '0');
+  const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
   const ano = agora.getFullYear();
 
   document.getElementById('hora').textContent =
@@ -16,5 +16,8 @@ function atualizarRelogio() {
     `${dia}/${mes}/${ano}`;
 }
 
-setInterval(atualizarRelogio, 1000);
+// atualiza imediatamente
 atualizarRelogio();
+
+// atualiza a cada 1 segundo
+setInterval(atualizarRelogio, 1000);
