@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.relogio {
+  background: #020617;
+  padding: 30px 50px;
+  border-radius: 12px;
+  text-align: center;
+  color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.relogio h1 {
+  font-size: 3rem;
+}
+
+.relogio p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
